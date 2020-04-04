@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+
+        //onload  窗口加载事件 
+        /*  window.addEventListener('load', function () {
+             var btn = document.querySelector('button');
+             btn.addEventListener('click', function () {
+                 alert('点击发送爱心！')
+             })
+         })
+         window.addEventListener('load', function () {
+ 
+             alert('点击发送爱心！！！！！')
+ 
+         })
+         window.addEventListener('load', function () {
+             alert('999')
+         })
+ 
+         document.addEventListener('DOMContentLoaded', function () {
+             alert('666')
+         }) */
+
+        //加载顺序：666—>点击发送爱心！！！！！——>999
+        //load事件要等页面内容全部加载完毕，包含页面dom元素 图片 fash css等
+        //DOMContentLoaded 是dom加载完毕就可以
+
+        // 调整窗口大小事件
+        window.addEventListener('load', function () {
+
+            var div = document.querySelector('div');
+            window.addEventListener('resize', function () {
+                console.log(window.innerWidth)
+                console.log('变化了');
+                if (window.innerWidth <= 800) {
+                    div.style.display = 'none';
+                } else {
+                    div.style.display = 'block';
+                }
+            })
+        })
+        // 响应式布局
+
+
+    </script>
+
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <button>点击发送爱心！！</button>
+</body>
+
+</html>

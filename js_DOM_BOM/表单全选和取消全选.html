@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="j_cbAll">
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var j_cbAll = document.getElementById('j_cbAll');
+        var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');
+        j_cbAll.onclick = function(){
+            //第一个全选按钮
+        for (var i = 0; i < j_tbs.length; i++) {
+            j_tbs[i].checked = this.checked;
+            
+        }
+    }
+    //所有按钮选上才选的按钮
+    for (var i =0;i < j_tbs.length; i++) {
+        j_tbs[i].onclick = function(){
+            var flag = true;
+            for (var i = 0; i < j_tbs.length; i++) {
+                if (!j_tbs[i].checked) {
+                    flag = false;
+                    break;
+                };
+            }
+            j_cbAll.checked = flag;
+        }
+        
+    }
+    </script>
+</body>
+</html>

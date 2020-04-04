@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="begin">开启定时器</button>
+    <button class="stop">停止定时器</button>
+    <script>
+        var begin = document.querySelector('.begin');
+        var stop = document.querySelector('.stop');
+        var timer =null;
+        begin.addEventListener('click',function(){//开启定时器
+           timer = setInterval(function(){
+                console.log('你好吗！！！')
+            },1000)
+        })
+        stop.addEventListener('click',function(){
+            clearTimeout(timer);//清除定时器
+        })
+
+        //setTimeout(调用函数，延时时间(毫秒))   到时间调用一次
+        // 也称回调函数
+        /* setTimeout(function(){
+            console.log('时间到了');
+        },2000); */
+
+        function calkback() {
+            console.log('爆炸了');
+        }
+       // setTimeout(calkback, 3000); 
+        var timer1 = setTimeout(calkback,3000);
+        var timer2 = setTimeout(calkback,5000);
+
+// 停止定时器：clearTimeout(TimeID)
+
+// setInterval(回调函数，[间隔毫秒数])   重复调用
+setInterval(function(){
+    console.log('继续输出');
+    
+},2000);
+    </script>
+</body>
+
+</html>

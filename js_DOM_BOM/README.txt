@@ -1,0 +1,8 @@
+ BOM是browser object model的缩写，简称浏览器对象模型
+BOM提供了独立于内容而与浏览器窗口进行交互的对象
+由于BOM主要用于管理窗口与窗口之间的通讯，因此其核心对象是window
+BOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性
+BOM缺乏标准，JavaScript语法的标准化组织是ECMA，DOM的标准化组织是W3C
+BOM最初是Netscape浏览器标准的一部分
+DOM是针对XML的基于树的API。描述了处理网页内容的方法和接口，是HTML和XML的API，DOM把整个页面规划成由节点层级构成的文档。
+DOM本身是与语言无关的API，它并不与Java，JavaScript或其他语言绑定

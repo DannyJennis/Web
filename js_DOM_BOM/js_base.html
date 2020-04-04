@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+ 
+   /*  var age = prompt("请输入您的名字：");
+    console.log(age);
+    console.log(typeof age);
+    console.log(18);
+    var num = 10; 
+    var str =  num.toString();
+    console.log(str);
+    console.log(String(num));        
+    console.log(num+'');    
+    var a = prompt(100);
+    console.log(parseInt(a));  可以取整   
+    var b = prompt('ss');   
+    console.log(b);
+    console.log(parseFloat(b));
+    var year = prompt("");
+    var age = 2020 - year;
+    alert(age);
+    var num1 = prompt("您的姓名是：");
+    var num2 = prompt("您的年龄是：");
+    var num3 = prompt("您的性别是：");
+    var result = parseFloat(num1) + parseFloat(num2);
+    alert('您的姓名是：' +num1+'\n'+'您的年龄是：'+num2+'\n您的性别是：'+num3);
+    
+
+    console.log(0 && 1123);
+    if (3 > 5) {
+        alert("沙漠骆驼")
+    }
+    var a = prompt("asdf");
+    if (a>18) {
+        alert("asdfasdfsdf")
+    }
+    
+    var b = prompt("请输入年份：")
+    if (b % 4 == 0 && b % 100 != 0 || b % 400 ==0) {
+        alert("闰年")
+    } else {
+        alert("不是闰年")
+    }
+    
+    var score = prompt("请输入您的分数：");
+    if (score >= 90) {
+        alert("宝贝，你是我的骄傲");
+    } 
+    else if (score >= 80) {
+        alert("宝贝，不错哦");
+    }else if(score >= 70)
+    {
+        alert("宝贝，还可以");
+    }else if(score >= 60)
+    {
+        alert("宝贝，继续加油");
+    }
+    else
+    {
+        alert("没你这儿子，滚");
+    }
+    
+    switch (key) {
+        case value:
+            
+            break;
+
+        case value:
+
+            break;    
+    
+        default:
+            break;
+    }
+   
+
+    //倒计时
+    function conutDown(time){
+        var nowTime = +new Date();
+        var inputTime = +new Date(time);
+        var times = (inputTime - nowTime)/1000;
+        var d = parseInt(times/60/60/24);
+        d = d < 10 ? "0" + d : d;
+        var h = parseInt(times/60/60%24);
+        h = h < 10 ? "0" + h : h;
+        var m = parseInt(times/60%60);
+        m = m < 10 ? "0" + m : m;
+        var s = parseInt(times%60);
+        s = s < 10 ? "0" + s : s;
+        return d + "天" + h + "时" + m + "分" + s + "秒";
+    }
+    var ss = prompt("请输入时间：");
+    console.log(conutDown(ss));
+
+ function unique(arr){
+     var newArr = [];
+     for (var i  = 0; i  < arr.length; i ++) {
+         if (newArr.indexOf(arr[i] === 0)) {
+             newArr.push(arr[i]);
+         }    
+     }
+     return newArr;
+ }
+ var demo = unique([87,87,7,7,9,9])
+ console.log(demo);
+ */
+ 
+    </script>
+    
+</head>
+<body>
+    <div class ="times">
+    <button>显示当前系统时间</button>
+    <div>当前时间为：</div>
+    <script>
+        var btn = document.querySelector("button");
+        var div = document.querySelector("div");
+        btn.onclick = function(){
+            div.innerHTML = getDate();
+        }
+        function getDate(){
+     var date = new Date();
+     var year = date.getFullYear();
+     var month = date.getMonth() + 1;
+     var dates = date.getDate();
+     var arr = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+     var day = date.getDay();
+     return "今天是：" + year + "年" + month + "月" + dates + "日" + arr[day]; 
+ }
+    </script>
+    </div>
+
+
+</body>
+</html>
